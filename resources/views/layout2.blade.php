@@ -139,7 +139,7 @@
             <li><a href=""><i class="fa fa-money"></i>  SOLICITUD DE COMPRAS</a></li>
             <li><a href="https://nodewave.com/Account/Logins"><i class="fa fa-cube"></i>  GESTION INTERVENTORIA</a></li>
             <li><a href=""><i class="fa fa-laptop"></i>  GESTION DE ACTIVOS</a></li>
-            <li><a href=""><i class="fa fa-plus-square"></i> HOJA DE TIMEPOS</a></li>
+            <li><a href="/calendar"><i class="fa fa-plus-square"></i> HOJA DE TIMEPOS</a></li>
             <li><a href=""><i class="fa fa-odnoklassniki"></i>RESERVA DE SALAS</a></li>
 
           </ul>
