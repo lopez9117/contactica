@@ -2,6 +2,9 @@
 
 use App\State;
 use App\Town;
+
+use Illuminate\Support\Facades\Input;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -94,11 +97,15 @@ Route::get('administrar', ['as' => 'administrar', 'uses' => 'ScoreController@adm
 //Rutas del calendario
 Route::get('calendar', function () {
   $states = State::all();
-  $towns = Town::all();
- return view('calendar.home', compact('states','towns'));
+   return view('calendar.home', compact('states'));
 });
 
+
+Route::get('ajax-centrodecostos/{id}', 'CalendarController@getcentrodecostos');
+
+
 Route::get('cargaEventos{id?}','CalendarController@index');
+
 Route::post('guardaEventos', array('as' => 'guardaEventos','uses' => 'CalendarController@create'));
 
 Route::post('guardaEventossinajax', array('as' => 'guardaEventossinajax','uses' => 'CalendarController@createsinajax'));

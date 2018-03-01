@@ -12,6 +12,8 @@ use App\Town;
 use App\State;
 use App\User;
 
+use Response;
+
 use DB;
 
 use Carbon\Carbon;
@@ -121,6 +123,23 @@ public function index()
         
   }
 }
+
+
+
+  public function getcentrodecostos(Request $request, $id){
+
+       // $estate_id = $request->input('id');
+
+       // $towns = Town::where('state_id', $estate_id )->get();
+   
+       // return Response::json($towns);
+          if($request->ajax()){
+            $towns = Town::towns($id);
+            return response()->json($towns);
+        }
+
+  }
+
    public function update(){
         //Valores recibidos via ajax
         $id = $_POST['id'];

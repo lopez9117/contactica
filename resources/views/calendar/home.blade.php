@@ -74,22 +74,20 @@
                            
                             <div class="form-group">
                                <label>Cliente: </label>
-                               <select class="form-control" id="cliente" name="cliente">
+                               <select class="form-control" placeholder="Selecciona" id="cliente" name="cliente">
                                  @foreach($states as $category)
-                                  <option>{{$category->id.' - '.$category->name}}</option>
+                                  <option value="{{$category->id }}">{{$category->name}}</option>
                                   @endforeach
                               </select>
                             </div>
 
-
-                            <div class="form-group">
+                             <div class="form-group">
                                <label>Centro de costos: </label>
-                               <select class="form-control" id="centro de costos" name="centrodecostos">
-                                  @foreach($towns as $town)
-                                  <option>{{ $town->name}}</option>
-                                  @endforeach
-                              </select>
+                               <select class="form-control" placeholder="Selecciona" id="centrodecostos" name="centrodecostos">
+                                 <option value=""></option>
+                               </select>
                             </div>
+
 
                             <div class="form-group">
                                <label>Hora Inicio: </label>
@@ -230,12 +228,32 @@
 
 <script>
 
+      
+       // $('#cliente').change(function(event){
+       //       $.get("ajax-centrodecostos/"+event.target.value+"",function(response,cliente){
+       //        // $('#centrodecostos').empty();
+       //        for(i=0; i<response.length;i++){
+       //            $('#centrodecostos').append('<option value="'+response[i].codigo+"''>"+response[i].name+"</option>");
+       //          }
+       //        });
+
+       //      });
+
+       $("#cliente").change(event => {
+  $.get(`ajax-centrodecostos/${event.target.value}`, function(res, cliente){
+    $("#centrodecostos").empty();
+    res.forEach(element => {
+      $("#centrodecostos").append(`<option value=${element.id}> ${element.name} </option>`);
+    });
+  });
+});
+
   (function($) {
     $(function() {
         $('input.timepicker').timepicker();
     });
 })(jQuery);
-
+   
     
   $(function () {
     /* initialize the external events
@@ -491,10 +509,10 @@
 
   function enviardia(date){
         
-
-      
-
       }
+
+
+    
 
    
 
