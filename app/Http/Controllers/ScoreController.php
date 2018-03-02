@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
+
+use App\User;
+use App\matriz_indicator;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,6 +19,33 @@ function __construct(){
         $this->middleware('auth');
     }
 
+
+   public function mapageneral()
+    {
+        return view('score.mapageneral');
+
+        //
+    }
+
+
+   public function crearindicadores()
+    {
+
+        $usuarios = User::all();
+
+        $indicators = matriz_indicator::all();
+
+        return view('score.crearindicadores',compact('usuarios','indicators'));
+
+        //
+    }
+
+     public function informeindicadores()
+    {
+        return view('score.informeindicadores');
+
+        //
+    }
 
     /**
      * Display a listing of the resource.
@@ -88,6 +118,22 @@ function __construct(){
 
         //RETURN $request->all();
 
+    }
+
+    public function indicadoresestore(Request $request){
+
+         DB::table('matriz_indicators')->insert([
+            "nombre"                 => $request->input('nombre'),
+            "numerador"              => $request->input('numerador'),
+            "denominador"            => $request->input('denominador'),
+            "meta"                   => $request->input('meta'),
+            "user_id"                => $request->input('usuario'),
+            "created_at"             => Carbon::now(),
+            "updated_at"             => carbon::now(),
+        ]);
+
+        //Redireccionar
+        return redirect()->route('crearindicadores');
     }
 
     /**

@@ -71,6 +71,10 @@ return Datatables::eloquent(App\User::query())->make(true);
 
 //Rutas Dedicadas a el Score Card
 Route::get('indicator', ['as' => 'indicator', 'uses' => 'ScoreController@index']);
+Route::get('mapageneral', ['as' => 'mapageneral', 'uses' => 'ScoreController@mapageneral']);
+Route::get('crearindicadores', ['as' => 'crearindicadores', 'uses' => 'ScoreController@crearindicadores']);
+Route::post('crearindicadores', ['as' => 'crearindicadores.store', 'uses' => 'ScoreController@indicadoresestore']);
+Route::get('informeindicadores', ['as' => 'informeindicadores', 'uses' => 'ScoreController@informeindicadores']);
 Route::get('create', ['as' => 'create', 'uses' => 'ScoreController@create']);
 Route::post('create', ['as' => 'create.store', 'uses' => 'ScoreController@store']);
 Route::delete('create/{id}', ['as' => 'create.destroy', 'uses' => 'ScoreController@destroy']);

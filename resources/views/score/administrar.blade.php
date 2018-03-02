@@ -5,9 +5,22 @@
   	<!-- Content Header (Page header) -->
   	<section class="content-header">
   		<h1>
-  			Administrar Indicador
+  			Administrar Indicadores
   		</h1>
   	</section>
-  	
-  </div>
+
+      <div class="container">
+        
+              <div class="row">
+                    
+                    <div class="col-md-6">
+                      <a href="/crearindicadores"><button class="btn btn-success btn-lg">Crear Indicador</button></a>
+                    </div> 
+                    <div class="col-md-6">
+                      <a href="/informeindicadores"><button class="btn btn-success btn-lg">Informe indicadores</button></a>
+                    </div> 
+               </div>
+      </div>
+
+  	  </div>
   @stop()
