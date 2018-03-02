@@ -74,7 +74,7 @@
       <th>Nombre</th>
       <th>Numerador</th>
       <th>denominador</th>
-      <th>meta</th>
+      <th>meta </th>
       <th>Usuario</th>
       <th>Acciones</th>
     </tr>
@@ -87,7 +87,7 @@
     <th>{{$indicator->nombre}}</th>
     <th>{{$indicator->numerador}}</th>
     <th>{{$indicator->denominador}}</th>
-    <th>{{$indicator->meta}}</th>
+    <th>{{$indicator->meta}} %</th>
     <th>{{$indicator->user_id}}</th>
     <th>
      <form style="display: inline;" method="POST" action="">
