@@ -46,11 +46,11 @@
 
 
       <div class="col-md-6">
-        <input type="text" required="" class="form-control" placeholder="Nombre numerador" name="numerador">
+        <input type="text" required="" class="form-control" placeholder=" Nombre numerador" name="numerador">
       </div>
 
       <div class="col-md-6">
-        <input type="text" required="" class="form-control" name="Nombre denominador" placeholder="denominador">
+        <input type="text" required="" class="form-control" name="denominador" placeholder="Nombre denominador">
       </div>
 
     </div>
