@@ -17,4 +17,10 @@ protected $fillable = [
     {
         return $this->belongsTo('User');
     }
+
+
+     public static function nombresdeindicadores($id){
+    	return matriz_indicator::where('id','=',$id)
+    	->get();
+    }
 }

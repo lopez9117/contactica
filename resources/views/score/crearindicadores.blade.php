@@ -29,6 +29,7 @@
           <div class="form-group">
           
            <select class="form-control" placeholder="Selecciona" id="usuario" name="usuario">
+            <option value="">Seleccione</option>
             @foreach($usuarios as $usuario)
             <option value="{{$usuario->id}}">{{$usuario->nombres.' '.$usuario->apellidos}}</option>
             @endforeach

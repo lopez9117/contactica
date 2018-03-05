@@ -12,15 +12,15 @@ use Illuminate\Support\Facades\Auth;
 
 class ScoreController extends Controller
 {
-    
 
-function __construct(){
+
+    function __construct(){
 
         $this->middleware('auth');
     }
 
 
-   public function mapageneral()
+    public function mapageneral()
     {
         return view('score.mapageneral');
 
@@ -28,12 +28,12 @@ function __construct(){
     }
 
 
-   public function crearindicadores()
+    public function crearindicadores()
     {
 
         $usuarios = User::all();
 
-       $indicators = matriz_indicator::all();
+        $indicators = matriz_indicator::all();
 
        // $user = User::find(1);
        //  $friends_votes = $user->friends()
@@ -48,7 +48,22 @@ function __construct(){
         //
     }
 
-     public function informeindicadores()
+
+    public function getnombresindicadores(Request $request, $id){
+
+        if($request->ajax()){
+
+             $nombres = matriz_indicator::nombresdeindicadores($id);
+
+            return response()->json($nombres);
+        }
+
+    }
+
+
+
+
+    public function informeindicadores()
     {
         return view('score.informeindicadores');
 
@@ -62,7 +77,9 @@ function __construct(){
      */
     public function index()
     {
-        return view('score.crearindicador');
+
+        $indicadoresfinales = matriz_indicator::all();
+        return view('score.crearindicador', compact('indicadoresfinales'));
 
         //
     }
@@ -93,8 +110,6 @@ function __construct(){
     {
 
         $usuario = Auth::user();
-
-        
 
         $imagen = $request->file('avatar');
 
@@ -130,19 +145,19 @@ function __construct(){
 
     public function indicadoresestore(Request $request){
 
-         DB::table('matriz_indicators')->insert([
-            "nombre"                 => $request->input('nombre'),
-            "numerador"              => $request->input('numerador'),
-            "denominador"            => $request->input('denominador'),
-            "meta"                   => $request->input('meta'),
-            "user_id"                => $request->input('usuario'),
-            "created_at"             => Carbon::now(),
-            "updated_at"             => carbon::now(),
-        ]);
+     DB::table('matriz_indicators')->insert([
+        "nombre"                 => $request->input('nombre'),
+        "numerador"              => $request->input('numerador'),
+        "denominador"            => $request->input('denominador'),
+        "meta"                   => $request->input('meta'),
+        "user_id"                => $request->input('usuario'),
+        "created_at"             => Carbon::now(),
+        "updated_at"             => carbon::now(),
+    ]);
 
         //Redireccionar
-        return redirect()->route('crearindicadores');
-    }
+     return redirect()->route('crearindicadores');
+ }
 
     /**
      * Display the specified resource.
@@ -211,8 +226,8 @@ function __construct(){
         $usuario = Auth::user();
 
         $indicadores = DB::table('users')
-            ->join('indicators', 'users.id', '=', 'indicators.user_id')
-            ->select('indicators.*')->where([
+        ->join('indicators', 'users.id', '=', 'indicators.user_id')
+        ->select('indicators.*')->where([
             ['indicators.mes', '=', '1'],
             ['users.id', '=', $usuario->id]])->get();
 
@@ -225,8 +240,8 @@ function __construct(){
         $usuario = Auth::user();
 
         $indicadores = DB::table('users')
-            ->join('indicators', 'users.id', '=', 'indicators.user_id')
-            ->select('indicators.*')->where([
+        ->join('indicators', 'users.id', '=', 'indicators.user_id')
+        ->select('indicators.*')->where([
             ['indicators.mes', '=', '2'],
             ['users.id', '=', $usuario->id]])->get();
 
@@ -239,8 +254,8 @@ function __construct(){
         $usuario = Auth::user();
 
         $indicadores = DB::table('users')
-            ->join('indicators', 'users.id', '=', 'indicators.user_id')
-            ->select('indicators.*')->where([
+        ->join('indicators', 'users.id', '=', 'indicators.user_id')
+        ->select('indicators.*')->where([
             ['indicators.mes', '=', '3'],
             ['users.id', '=', $usuario->id]])->get();
 
@@ -253,8 +268,8 @@ function __construct(){
         $usuario = Auth::user();
 
         $indicadores = DB::table('users')
-            ->join('indicators', 'users.id', '=', 'indicators.user_id')
-            ->select('indicators.*')->where([
+        ->join('indicators', 'users.id', '=', 'indicators.user_id')
+        ->select('indicators.*')->where([
             ['indicators.mes', '=', '4'],
             ['users.id', '=', $usuario->id]])->get();
 
@@ -267,8 +282,8 @@ function __construct(){
         $usuario = Auth::user();
 
         $indicadores = DB::table('users')
-            ->join('indicators', 'users.id', '=', 'indicators.user_id')
-            ->select('indicators.*')->where([
+        ->join('indicators', 'users.id', '=', 'indicators.user_id')
+        ->select('indicators.*')->where([
             ['indicators.mes', '=', '5'],
             ['users.id', '=', $usuario->id]])->get();
 
@@ -281,8 +296,8 @@ function __construct(){
         $usuario = Auth::user();
 
         $indicadores = DB::table('users')
-            ->join('indicators', 'users.id', '=', 'indicators.user_id')
-            ->select('indicators.*')->where([
+        ->join('indicators', 'users.id', '=', 'indicators.user_id')
+        ->select('indicators.*')->where([
             ['indicators.mes', '=', '6'],
             ['users.id', '=', $usuario->id]])->get();
 
@@ -294,8 +309,8 @@ function __construct(){
         $usuario = Auth::user();
 
         $indicadores = DB::table('users')
-            ->join('indicators', 'users.id', '=', 'indicators.user_id')
-            ->select('indicators.*')->where([
+        ->join('indicators', 'users.id', '=', 'indicators.user_id')
+        ->select('indicators.*')->where([
             ['indicators.mes', '=', '7'],
             ['users.id', '=', $usuario->id]])->get();
 
@@ -308,8 +323,8 @@ function __construct(){
         $usuario = Auth::user();
 
         $indicadores = DB::table('users')
-            ->join('indicators', 'users.id', '=', 'indicators.user_id')
-            ->select('indicators.*')->where([
+        ->join('indicators', 'users.id', '=', 'indicators.user_id')
+        ->select('indicators.*')->where([
             ['indicators.mes', '=', '8'],
             ['users.id', '=', $usuario->id]])->get();
 
@@ -322,8 +337,8 @@ function __construct(){
         $usuario = Auth::user();
 
         $indicadores = DB::table('users')
-            ->join('indicators', 'users.id', '=', 'indicators.user_id')
-            ->select('indicators.*')->where([
+        ->join('indicators', 'users.id', '=', 'indicators.user_id')
+        ->select('indicators.*')->where([
             ['indicators.mes', '=', '9'],
             ['users.id', '=', $usuario->id]])->get();
 
@@ -336,8 +351,8 @@ function __construct(){
         $usuario = Auth::user();
 
         $indicadores = DB::table('users')
-            ->join('indicators', 'users.id', '=', 'indicators.user_id')
-            ->select('indicators.*')->where([
+        ->join('indicators', 'users.id', '=', 'indicators.user_id')
+        ->select('indicators.*')->where([
             ['indicators.mes', '=', '10'],
             ['users.id', '=', $usuario->id]])->get();
 
@@ -350,8 +365,8 @@ function __construct(){
         $usuario = Auth::user();
 
         $indicadores = DB::table('users')
-            ->join('indicators', 'users.id', '=', 'indicators.user_id')
-            ->select('indicators.*')->where([
+        ->join('indicators', 'users.id', '=', 'indicators.user_id')
+        ->select('indicators.*')->where([
             ['indicators.mes', '=', '11'],
             ['users.id', '=', $usuario->id]])->get();
 
@@ -364,8 +379,8 @@ function __construct(){
         $usuario = Auth::user();
 
         $indicadores = DB::table('users')
-            ->join('indicators', 'users.id', '=', 'indicators.user_id')
-            ->select('indicators.*')->where([
+        ->join('indicators', 'users.id', '=', 'indicators.user_id')
+        ->select('indicators.*')->where([
             ['indicators.mes', '=', '12'],
             ['users.id', '=', $usuario->id]])->get();
 
