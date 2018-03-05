@@ -33,7 +33,15 @@ function __construct(){
 
         $usuarios = User::all();
 
-        $indicators = matriz_indicator::all();
+       $indicators = matriz_indicator::all();
+
+       // $user = User::find(1);
+       //  $friends_votes = $user->friends()
+       //       ->with('user') // bring along details of the friend
+       //      ->join('votes', 'votes.user_id', '=', 'friends.friend_id')
+       //     ->get(['votes.*']); // exclude extra details from friends table
+
+
 
         return view('score.crearindicadores',compact('usuarios','indicators'));
 
