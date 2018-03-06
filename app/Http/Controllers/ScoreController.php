@@ -60,6 +60,11 @@ class ScoreController extends Controller
 
     }
 
+    public function mapadeprocesos(){
+
+        return view('score.procesosindicadores');
+    }
+
 
 
 
@@ -151,6 +156,7 @@ class ScoreController extends Controller
         "denominador"            => $request->input('denominador'),
         "meta"                   => $request->input('meta'),
         "user_id"                => $request->input('usuario'),
+        "area"                => $request->input('proceso'),
         "created_at"             => Carbon::now(),
         "updated_at"             => carbon::now(),
     ]);

@@ -24,38 +24,38 @@ Route::get('/', function () {
 return App\Role::with('user')->get();
 });*/
 
-Route::get('test3', function () {
-    $usuario               = new App\User;
+// Route::get('test3', function () {
+//     $usuario               = new App\User;
 
-    $usuario->name         = 'luis eduardo lopez';
-    $usuario->email        = 'lu.lopez@misena.edu.co';
-     $usuario->nombres        = 'lucho';
-      $usuario->apellidos        = 'lopez';
-      $usuario->pais        = '5';
-      $usuario->ciudad        = 'medellin';
-      $usuario->institucion        = 'soportica';
-      $usuario->ocupacion        = 'Fullstack developer';
-      $usuario->ruta        = '/dist/img/422c94f22750d34730bff25db01204d844d3de7c.png';
+//     $usuario->name         = 'luis eduardo lopez';
+//     $usuario->email        = 'lu.lopez@misena.edu.co';
+//      $usuario->nombres        = 'lucho';
+//       $usuario->apellidos        = 'lopez';
+//       $usuario->pais        = '5';
+//       $usuario->ciudad        = 'medellin';
+//       $usuario->institucion        = 'soportica';
+//       $usuario->ocupacion        = 'Fullstack developer';
+//       $usuario->ruta        = '/dist/img/422c94f22750d34730bff25db01204d844d3de7c.png';
 
-    $usuario->password     = bcrypt('123456');
-    $usuario->save();
+//     $usuario->password     = bcrypt('123456');
+//     $usuario->save();
     
-    return $usuario;
-});
+//     return $usuario;
+// });
 
-Route::get('test2', function () {
-    $roles               = new App\Role;
-    $roles->name         = 'admin';
-    $roles->display_name = 'rol administrador del sistema sistema';
-    $roles->description  = 'Usuario administrador capaz de crear usuarios y roles';
-    $roles->save();
+// Route::get('test2', function () {
+//     $roles               = new App\Role;
+//     $roles->name         = 'admin';
+//     $roles->display_name = 'rol administrador del sistema sistema';
+//     $roles->description  = 'Usuario administrador capaz de crear usuarios y roles';
+//     $roles->save();
 
-    return $roles;
+//     return $roles;
 
-});
+// });
 
 
-
+//Rutads Dedicadas  a gestion de suarios
 Route::get('login', 'Auth\AuthController@showLoginForm');
 Route::post('login', 'Auth\AuthController@login');
 Route::get('logout', 'Auth\AuthController@logout');
@@ -72,14 +72,15 @@ return Datatables::eloquent(App\User::query())->make(true);
 //Rutas Dedicadas a el Score Card
 Route::get('indicator', ['as' => 'indicator', 'uses' => 'ScoreController@index']);
 Route::get('mapageneral', ['as' => 'mapageneral', 'uses' => 'ScoreController@mapageneral']);
+Route::get('mapadeprocesos', ['as' => 'mapadeprocesos', 'uses' => 'ScoreController@mapadeprocesos']);
 Route::get('crearindicadores', ['as' => 'crearindicadores', 'uses' => 'ScoreController@crearindicadores']);
 Route::post('crearindicadores', ['as' => 'crearindicadores.store', 'uses' => 'ScoreController@indicadoresestore']);
 Route::get('informeindicadores', ['as' => 'informeindicadores', 'uses' => 'ScoreController@informeindicadores']);
 Route::get('create', ['as' => 'create', 'uses' => 'ScoreController@create']);
 Route::post('create', ['as' => 'create.store', 'uses' => 'ScoreController@store']);
 Route::delete('create/{id}', ['as' => 'create.destroy', 'uses' => 'ScoreController@destroy']);
-
 Route::get('ajax-nombreindicadores/{id}', 'ScoreController@getnombresindicadores');
+
 
 //rutas para seleccionar los indicadores de cada mes
 

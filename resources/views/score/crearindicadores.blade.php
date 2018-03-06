@@ -36,6 +36,8 @@
           </select>
         </div>
 
+       
+
       </div>
 
     </div>
@@ -61,8 +63,35 @@
     <div class="col-md-6">
       <input type="number" required="" class="form-control" name="meta" placeholder="Meta">
     </div>
+  
+
+      
 
     <div class="col-md-6">
+
+      <div class="form-group">
+          
+           <select class="form-control" placeholder="Selecciona" id="proceso" name="proceso">
+            <option value="">Seleccione:</option>
+            <option value="1">Interventoría</option>
+            <option value="2">Comunicaciones</option>
+            <option value="3">Mejora Continua</option>
+            <option value="4">GG.HH</option>
+            <option value="5">I+D+i</option>
+            <option value="6">Admon SGI</option>
+            <option value="7">Comercial</option>
+            <option value="8">Proveedores</option>
+            <option value="9">SST</option>
+            <option value="10">Ambientales</option>
+            <option value="11">Direccionamiento estrategico</option>
+            <option value="12">TIC</option>
+
+
+            <!-- @foreach($usuarios as $usuario)
+            <option value="{{$usuario->id}}">{{$usuario->nombres.' '.$usuario->apellidos}}</option>
+            @endforeach -->
+          </select>
+        </div>
       <button  type="submmit" class="btn btn-success" value="Dime propiedades" >Guardar</button>
     </div>
 
@@ -91,6 +120,7 @@
     <th>denominador</th>
     <th>meta </th>
     <th>Usuario</th>
+    <th>Area</th>
     <th>Acciones</th>
   </tr>
 </thead>
@@ -104,6 +134,8 @@
   <th>{{$indicator->denominador}}</th>
   <th>{{$indicator->meta}} %</th>
   <th>{{$indicator->user_id}}</th>
+  <th>{{$indicator->area}}</th>
+
   <th>
    <form style="display: inline;" method="POST" action="">
     {!!csrf_field()!!}

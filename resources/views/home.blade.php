@@ -29,10 +29,11 @@
       <div class="container">  
         <div class="row">
           <div class="col-sm-4">
-            <a href="/create"><img src="dist/img/bars-chart (1).png"/><h4>SCORE CARD</h4></a>
+            <a href="/mapageneral"><img src="dist/img/bars-chart (1).png"/><h4>SCORE CARD</h4></a>
           </div>
           <div class="col-sm-4">
-            <a href="#"><img src="dist/img/car.png"/><h4>SOLICITUD DE TRANSPORTE</h4></a>
+            <a href="#"><img src="dist/img/car.png"/>
+<h4>SOLICITUD DE TRANSPORTE</h4></a>
 
           </div>
           <div class="col-sm-4">

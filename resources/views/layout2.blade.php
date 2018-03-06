@@ -127,7 +127,7 @@
               <i class="fa fa-line-chart"></i><span> SCORE CARD</span><i class="fa fa-angle-left pull-right"> </i>
             </a>
               <ul class="treeview-menu">
-                <li><a href="/create"><i class="fa fa-circle-o"></i>Indicadores</a></li>
+                <li><a href="/mapageneral"><i class="fa fa-circle-o"></i>Indicadores</a></li>
                 <li><a href="/administrar"><i class="fa fa-circle-o"></i>Administrar</a></li>
               </ul>
             </li>
