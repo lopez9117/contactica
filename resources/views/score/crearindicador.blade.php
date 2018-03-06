@@ -136,7 +136,7 @@
 
 </div>
 
-@stop()
+@endsection()
 
 @section('scripts')
 
@@ -155,3 +155,5 @@
         });
  });
 </script>
+
+@endsection()
