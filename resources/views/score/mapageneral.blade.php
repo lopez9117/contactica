@@ -50,7 +50,7 @@
         <div class="caption">
           <h3 align="center">Procesos internos</h3>
           <div align="center"><img src="dist/img/if_running_process_45340.png" alt=""></div>
-          <p style="margin-left: 25px;""><a href="/mapadeprocesos" class="btn btn-primary" role="button">Ver Detalle</a> <a href="#" class="btn btn-default" role="button">Ver Informe</a></p>
+          <p style="margin-left: 25px;""><a href="/mapadeprocesos" class="btn btn-primary" role="button">Ver Detalle</a> <a href="informeindicadores" class="btn btn-default" role="button">Ver Informe</a></p>
         </div>
       </div>
     </div>
@@ -78,9 +78,6 @@
 
 </div>
 </div>
-
-
-
 
 
 @stop()

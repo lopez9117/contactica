@@ -6,6 +6,7 @@ use Carbon\Carbon;
 
 use App\User;
 use App\matriz_indicator;
+use App\Proceso;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -35,6 +36,8 @@ class ScoreController extends Controller
 
         $indicators = matriz_indicator::all();
 
+         $procesos = Proceso::all();
+
        // $user = User::find(1);
        //  $friends_votes = $user->friends()
        //       ->with('user') // bring along details of the friend
@@ -43,7 +46,7 @@ class ScoreController extends Controller
 
 
 
-        return view('score.crearindicadores',compact('usuarios','indicators'));
+        return view('score.crearindicadores',compact('usuarios','indicators','procesos'));
 
         //
     }
@@ -61,6 +64,7 @@ class ScoreController extends Controller
     }
 
     public function mapadeprocesos(){
+
 
         return view('score.procesosindicadores');
     }
