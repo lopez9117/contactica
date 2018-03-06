@@ -97,7 +97,6 @@
             </div>
           </div>
 
-
           <div style="padding-top:34px;" class="col-md-1">
             <span> X 100  </span>  
 
@@ -137,6 +136,8 @@
 
 </div>
 
+@stop()
+
 @section('scripts')
 
 <script>
@@ -154,4 +155,3 @@
         });
  });
 </script>
-@stop()
