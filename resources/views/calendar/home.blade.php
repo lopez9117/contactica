@@ -54,7 +54,7 @@
               </div>
               <!-- /btn-group -->
               <div class="input-group">
-                <input id="new-event" type="text" class="form-control" placeholder="Titulo de evento">
+                <input id="new-event" type="text" class="form-control" placeholder="Título de evento">
 
                 <div class="input-group-btn">
                   <button id="add-new-event" type="button" class="btn btn-primary btn-flat">Agregar</button>
@@ -299,7 +299,7 @@
         today: 'hoy',
         month: 'mes',
         week: 'semana',
-        day: 'dia'
+        day: 'día'
       },
 
       events: { url:"cargaEventos"},

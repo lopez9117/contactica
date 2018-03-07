@@ -65,7 +65,7 @@
       <div class="thumbnail">
 
         <div class="caption">
-          <h3 align="center">Perspectiva inovación</h3>
+          <h3 align="center">Perspectiva innovación</h3>
           <div align="center"><img src="dist/img/if_Creativity_2921812.png" alt=""></div>
           <p style="margin-left: 25px;"><a href="#" class="btn btn-primary" role="button">Ver Detalle</a> <a href="#" class="btn btn-default" role="button">Ver Informe</a></p>
         </div>

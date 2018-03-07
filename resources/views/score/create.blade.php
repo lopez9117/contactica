@@ -34,7 +34,7 @@
 
 
     <ul class="nav nav-tabs" >
-     <li id="enero" role="presentation"  ><a href="/cargarenero">enero</a></li>
+     <li id="enero" role="presentation"  ><a href="/cargarenero">Enero</a></li>
      <li id="Febrero" role="presentation" ><a href="/cargarfebreo">Febrero</a></li>
      <li id="Marzo" role="presentation" ><a href="/cargarmarzo">Marzo</a></li>
      <li id="Abril" role="presentation" ><a href="/cargarabril">Abril</a></li>
@@ -62,8 +62,8 @@
     <th>Nombre de numerador</th>
     <th>Nombre de denominador</th>
     <th>Numerador</th>
-    <th>denominador</th>
-    <th>resultado</th>
+    <th>Denominador</th>
+    <th>Resultado</th>
     <th>Comentario</th>
     <th>Fuente de datos</th>
     <th>Acciones</th>

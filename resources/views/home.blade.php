@@ -41,7 +41,7 @@
             <a href="#"><img src="dist/img/flats.png"/><h4>EDIFICIOS</h4></a>
           </div>
           <div class="col-sm-4" >
-              <a href="#"><img src="dist/img/scholarship.png"/><h4>GESTION DEL CONOCIMIENTO</h4></a>
+              <a href="#"><img src="dist/img/scholarship.png"/><h4>GESTIÓN DEL CONOCIMIENTO</h4></a>
           </div>
 
 
@@ -57,12 +57,12 @@
             <a href="#"><img src="dist/img/transaction.png"/><h4>SOLICITUDES DE COMPRAS</h4></a>
           </div>
           <div class="col-sm-4">
-            <a href="https://nodewave.com/Account/Login"><img src="dist/img/engineer.png"/><h4>GESTION DE INTERVENTORIA</h4></a>
+            <a href="https://nodewave.com/Account/Login"><img src="dist/img/engineer.png"/><h4>GESTIÓN DE INTERVENTORÍA</h4></a>
           </div>
 
           
           <div class="col-sm-4">
-           <a href="#"><img src="dist/img/clipboard.png"/><h4>GESTION DE ACTIVOS</h4></a>
+           <a href="#"><img src="dist/img/clipboard.png"/><h4>GESTIÓN DE ACTIVOS</h4></a>
           </div>
           <div class="col-sm-4">
 
@@ -74,7 +74,7 @@
           </div>
           <div class="col-sm-4">
 
-            <a href="#"><img src="dist/img/interview.png"/><h4>GESTION DE PROVEEDORES</h4></a>
+            <a href="#"><img src="dist/img/interview.png"/><h4>GESTIÓN DE PROVEEDORES</h4></a>
           </div>
 
         </div>

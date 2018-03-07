@@ -35,7 +35,7 @@
               <th>{{$usuario->id}}</th>
               <th>{{$usuario->name}}</th>
               <th>{{$usuario->email}}</th>
-              <th>{{$usuario->ocupacion}}</th>
+              <th>{{$usuario->ocupación}}</th>
 
               <th > <img src="{{$usuario->ruta}}" alt="" style="width: 50px; height: 50px;"> </th>
 

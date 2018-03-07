@@ -22,7 +22,7 @@
         <div class="thumbnail">
 
           <div class="caption">
-            <h3 align="center">INTERVENTORIA</h3>
+            <h3 align="center">INTERVENTORÍA</h3>
             <div align="center"><img src="dist/img/if_draw-15_725551.png" alt=""></div>
             <div align="center"><p><a href="create" class="btn btn-primary" role="button">Ver Indicador</a> <a href="/indicator" class="btn btn-default" role="button">Crear Indicador</a></p></div>
           </div>
@@ -76,7 +76,7 @@
       <div class="thumbnail">
 
         <div class="caption">
-          <h3 align="center">ADMON SGI</h3>
+          <h3 align="center">ADMÓN SGI</h3>
           <div align="center"><img src="dist/img/if_vector_65_16_473774.png" alt=""></div>
          <div align="center"><p><a href="create" class="btn btn-primary" role="button">Ver Indicador</a> <a href="/indicator" class="btn btn-default" role="button">Crear Indicador</a></p></div>
         </div>
@@ -131,7 +131,7 @@
       <div class="thumbnail">
 
         <div class="caption">
-          <h3 style="font-size: 16.3PX;" align="center">DIRECCIONAMIENTO ESTRATEGICO</h3>
+          <h3 style="font-size: 16.3PX;" align="center">DIRECCIONAMIENTO ESTRATÉGICO</h3>
           <div align="center" style="padding-bottom: 10px;"><img src="dist/img/if_14_2958200.png" alt=""></div>
          <div align="center"><p><a href="create" class="btn btn-primary" role="button">Ver Indicador</a> <a href="/indicator" class="btn btn-default" role="button">Crear Indicador</a></p></div>
         </div>

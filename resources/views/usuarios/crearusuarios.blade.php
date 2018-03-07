@@ -34,9 +34,9 @@
       <div class="col-md-6">
         <input required="" class="form-control" placeholder="Password" type="Password" name="password"><br>
 
-        <input required="" class="form-control" placeholder="Ocupacion" type="text" name="ocupacion"> <br>
+        <input required="" class="form-control" placeholder="Ocupación" type="text" name="ocupacion"> <br>
 
-        <input class="form-control" placeholder="institucion" type="text" name="institucion"><br>
+        <input class="form-control" placeholder="institución" type="text" name="institucion"><br>
 
         <input  class="form-control" placeholder="Imagen" type="file" name="avatar" id="avatar"><br>
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Soportica | Panel Control</title>
+  <title>Sopórtica | Panel Control</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -133,12 +133,12 @@
             </li>
             <li><a href=""><i class="fa fa-car"></i>  SOLICITUD TRANSPORTE</a></li>
             <li><a href=""><i class="fa fa-building-o"></i>  EDIFICIOS</a></li>
-            <li><a href=""><i class="fa fa-graduation-cap"></i>  GESTION DEL CONOCIMIENTO</a></li>
+            <li><a href=""><i class="fa fa-graduation-cap"></i>  GESTIÓN DEL CONOCIMIENTO</a></li>
             <li><a href=""><i class="fa fa-sitemap"></i>  MANTENIMIENTO</a></li>
             <li><a href=""><i class="fa fa-thumbs-up"></i>  PROCESO I+D+I</a></li>
             <li><a href=""><i class="fa fa-money"></i>  SOLICITUD DE COMPRAS</a></li>
-            <li><a href="https://nodewave.com/Account/Logins"><i class="fa fa-cube"></i>  GESTION INTERVENTORIA</a></li>
-            <li><a href=""><i class="fa fa-laptop"></i>  GESTION DE ACTIVOS</a></li>
+            <li><a href="https://nodewave.com/Account/Logins"><i class="fa fa-cube"></i>  GESTIÓN INTERVENTORÍA</a></li>
+            <li><a href=""><i class="fa fa-laptop"></i>  GESTIÓN DE ACTIVOS</a></li>
             <li><a href="/calendar"><i class="fa fa-plus-square"></i> HOJA DE TIMEPOS</a></li>
             <li><a href=""><i class="fa fa-odnoklassniki"></i>RESERVA DE SALAS</a></li>
 
@@ -155,7 +155,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 1.0
         </div>
-        <strong>Copyright &copy; 2017 <a href="http://soportica.com.co">Soportica</a>.</strong>Todos los derechos reservados
+        <strong>Copyright &copy; 2017 <a href="http://soportica.com.co">Sopórtica</a>.</strong>Todos los derechos reservados
       </footer>
 
 
