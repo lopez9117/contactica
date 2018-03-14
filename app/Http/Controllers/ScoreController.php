@@ -160,7 +160,8 @@ class ScoreController extends Controller
         "denominador"            => $request->input('denominador'),
         "meta"                   => $request->input('meta'),
         "user_id"                => $request->input('usuario'),
-        "area"                => $request->input('proceso'),
+        "area"                   => $request->input('proceso'),
+        "frecuencia"             => $request->input('frecuencia'),
         "created_at"             => Carbon::now(),
         "updated_at"             => carbon::now(),
     ]);
@@ -200,9 +201,7 @@ class ScoreController extends Controller
        //      ->join('votes', 'votes.user_id', '=', 'friends.friend_id')
        //     ->get(['votes.*']); // exclude extra details from friends table
 
-
-
-        return view('score.editarindicadores', compact('indicadores', 'usuarios','procesos'));
+       return response()->json($indicadores);
 
     }
 
@@ -217,16 +216,19 @@ class ScoreController extends Controller
     {
         //
 
-          DB::table('matriz_indicators')->insert([
-        "nombre"                 => $request->input('nombre'),
-        "numerador"              => $request->input('numerador'),
-        "denominador"            => $request->input('denominador'),
-        "meta"                   => $request->input('meta'),
-        "user_id"                => $request->input('usuario'),
-        "area"                => $request->input('proceso'),
-        "created_at"             => Carbon::now(),
-        "updated_at"             => carbon::now(),
-    ]);
+                $indicadores = matriz_indicator::find($id);
+                $indicadores->nombre          = $request->nombre;
+                $indicadores->numerador         = $request->numerador;
+                $indicadores-> denominador         = $request->denominador;
+                $indicadores->meta          = $request->meta;
+                $indicadores->user_id         = $request->usuario;
+                $indicadores->area         = $request->proceso;
+
+                $indicadores->save();
+
+        
+
+    
 
         //Redireccionar
      return redirect()->route('crearindicadores');

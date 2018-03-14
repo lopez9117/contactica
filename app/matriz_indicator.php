@@ -9,7 +9,7 @@ class matriz_indicator extends Model
 
 
 protected $fillable = [
-        'nombre', 'numerador', 'denominador','meta','user_id'];
+        'nombre', 'numerador', 'denominador','meta','user_id','area','frecuencia'];
 
 
 
