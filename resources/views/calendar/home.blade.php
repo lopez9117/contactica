@@ -240,20 +240,20 @@
        //      });
 
        $("#cliente").change(event => {
-  $.get(`ajax-centrodecostos/${event.target.value}`, function(res, cliente){
-    $("#centrodecostos").empty();
-    res.forEach(element => {
-      $("#centrodecostos").append(`<option value=${element.id}> ${element.name} </option>`);
-    });
-  });
-});
+        $.get(`ajax-centrodecostos/${event.target.value}`, function(res, cliente){
+          $("#centrodecostos").empty();
+          res.forEach(element => {
+            $("#centrodecostos").append(`<option value=${element.id}> ${element.name} </option>`);
+          });
+        });
+      });
 
-  (function($) {
-    $(function() {
-        $('input.timepicker').timepicker();
-    });
-})(jQuery);
-   
+       (function($){
+        $(function(){
+          $('input.timepicker').timepicker();
+        });
+      })(jQuery);
+
     
   $(function () {
     /* initialize the external events

@@ -1,11 +1,12 @@
   @extends('layout2')
 
   @section('content')  
+
   <div class="content-wrapper">
-  	<!-- Content Header (Page header) -->
+    <!-- Content Header (Page header) -->
     <section class="content-header">
      <h1>
-       crear Indicadores
+ Editar Indicadores
      </h1>
    </section>
 
@@ -21,7 +22,7 @@
       <div  class="row">
 
         <div  class="col-md-6">
-          <input required="" class="form-control" placeholder="nombre del indicador" type="text" name="nombre">
+          <input required="" class="form-control" placeholder="nombre del indicador" value="{{$indicadores->nombre}}" type="text" name="nombre">
         </div>
 
         <div class="col-md-6">
@@ -36,24 +37,18 @@
           </select>
         </div>
 
-
-
       </div>
 
     </div>
 
-
-
     <div class="row">
 
-
-
       <div class="col-md-6">
-        <input type="text" required="" class="form-control" placeholder=" Nombre numerador" name="numerador">
+        <input type="text" required="" class="form-control" placeholder=" Nombre numerador"  value="{{$indicadores->numerador}}"  name="numerador">
       </div>
 
       <div class="col-md-6">
-        <input type="text" required="" class="form-control" name="denominador" placeholder="Nombre denominador">
+        <input type="text" required="" class="form-control" name="denominador" value="{{$indicadores->denominador}}" placeholder="Nombre denominador">
       </div>
 
     </div>
@@ -61,7 +56,7 @@
     <div class="row">
       <br>
       <div class="col-md-6">
-        <input type="number" required="" class="form-control" name="meta" placeholder="Meta">
+        <input type="number" required="" class="form-control" value="{{$indicadores->meta}}" name="meta" placeholder="Meta">
       </div>
 
 
@@ -84,68 +79,7 @@
   </div>
 
 </form>
-
-
-
-
-
-
-<div align="center">
-  <h1>Indicadores</h1>
-</div>
-
-<table style="border:  #00FFFF  2px solid;"  class="table table-bordered" id="myTable">
-  <thead>
-   <tr >
-    <th>ID</th>
-    <th>Nombre</th>
-    <th>Numerador</th>
-    <th>denominador</th>
-    <th>meta </th>
-    <th>Usuario</th>
-    <th>Area</th>
-    <th>Acciones</th>
-  </tr>
-</thead>
-<tbody>
- <tr>
-
-  @foreach ($indicators as $indicator)
-  <th>{{$indicator->id}}</th>
-  <th>{{$indicator->nombre}}</th>
-  <th>{{$indicator->numerador}}</th>
-  <th>{{$indicator->denominador}}</th>
-  <th>{{$indicator->meta}} %</th>
-  <th>{{$indicator->user_id}}</th>
-  <th>{{$indicator->area}}</th>
-
-  <th>
-    <form style="display: inline;" method="POST" action=" {{route('score.destroy', $indicator->id)}}">
-    {!!csrf_field()!!}
-    {!!method_field('DELETE')!!}
-    <button type="submit" class="btn btn-danger">Eliminar</button>
-  </form>
-
-  <a href="{{route('editar',$indicator->id)}}" class="btn btn-warning" >Editar</a>
-
-</th>
-</tr>
-@endforeach
-</tbody>
-</table>
-
-</section>
-
-
-
-
-
-
-
-
-</div>
-             
-@endsection()
-
-
-
+   
+      </section>   
+    </div>
+    @stop()

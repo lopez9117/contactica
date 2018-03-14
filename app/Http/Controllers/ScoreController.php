@@ -186,9 +186,24 @@ class ScoreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editar($id)
     {
-        //
+
+        $indicadores = matriz_indicator::find($id);
+
+          $usuarios = User::all();
+         $procesos = Proceso::all();
+
+       // $user = User::find(1);
+       //  $friends_votes = $user->friends()
+       //       ->with('user') // bring along details of the friend
+       //      ->join('votes', 'votes.user_id', '=', 'friends.friend_id')
+       //     ->get(['votes.*']); // exclude extra details from friends table
+
+
+
+        return view('score.editarindicadores', compact('indicadores', 'usuarios','procesos'));
+
     }
 
     /**
@@ -201,6 +216,24 @@ class ScoreController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+          DB::table('matriz_indicators')->insert([
+        "nombre"                 => $request->input('nombre'),
+        "numerador"              => $request->input('numerador'),
+        "denominador"            => $request->input('denominador'),
+        "meta"                   => $request->input('meta'),
+        "user_id"                => $request->input('usuario'),
+        "area"                => $request->input('proceso'),
+        "created_at"             => Carbon::now(),
+        "updated_at"             => carbon::now(),
+    ]);
+
+        //Redireccionar
+     return redirect()->route('crearindicadores');
+
+
+
+
     }
 
     /**
@@ -217,6 +250,16 @@ class ScoreController extends Controller
 
         //retornando a los indicadores
         return redirect()->route('create');
+    }
+
+      public function destroymatriz($id)
+    {
+
+        //eliminando indicador
+        DB::table('matriz_indicators')->where('id', $id)->delete();
+
+        //retornando a los indicadores
+        return redirect()->route('crearindicadores');
     }
 
     /**

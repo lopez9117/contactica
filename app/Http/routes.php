@@ -79,6 +79,11 @@ Route::get('informeindicadores', ['as' => 'informeindicadores', 'uses' => 'Score
 Route::get('create', ['as' => 'create', 'uses' => 'ScoreController@create']);
 Route::post('create', ['as' => 'create.store', 'uses' => 'ScoreController@store']);
 Route::delete('create/{id}', ['as' => 'create.destroy', 'uses' => 'ScoreController@destroy']);
+Route::delete('score/{id}', ['as' => 'score.destroy', 'uses' => 'ScoreController@destroymatriz']);
+
+Route::get('editar/{id}',['as' => 'editar', 'uses' =>  'ScoreController@editar']);
+
+Route::put('score/{id}', 'ScoreController@update');
 Route::get('ajax-nombreindicadores/{id}', 'ScoreController@getnombresindicadores');
 
 
