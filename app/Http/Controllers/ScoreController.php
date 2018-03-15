@@ -192,9 +192,7 @@ class ScoreController extends Controller
 
         $indicadores = matriz_indicator::find($id);
 
-          $usuarios = User::all();
-         $procesos = Proceso::all();
-
+       
        // $user = User::find(1);
        //  $friends_votes = $user->friends()
        //       ->with('user') // bring along details of the friend
@@ -212,31 +210,42 @@ class ScoreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update()
     {
         //
+              $id = $_POST['id'];   
+             $nombre = $_POST['nombre'];
+          
+             $numerador = $_POST['numerador'];
+             $denominador = $_POST['denominador'];
+             $meta = $_POST['meta'];
+            
+             $frecuencia = $_POST['frecuencia'];
 
-                $indicadores = matriz_indicator::find($id);
-                $indicadores->nombre          = $request->nombre;
-                $indicadores->numerador         = $request->numerador;
-                $indicadores-> denominador         = $request->denominador;
-                $indicadores->meta          = $request->meta;
-                $indicadores->user_id         = $request->usuario;
-                $indicadores->area         = $request->proceso;
+
+            $indicadores = matriz_indicator::find($id);
+
+             $indicadores->nombre = $nombre;
+                $indicadores->numerador = $numerador;
+                $indicadores-> denominador = $denominador;
+                $indicadores->meta = $meta;
+               
+               
+                $indicadores->frecuencia  = $frecuencia;
 
                 $indicadores->save();
 
-        
-
-    
-
-        //Redireccionar
-     return redirect()->route('crearindicadores');
-
-
-
+                    //Redireccionar
+         return redirect()->route('crearindicadores');
 
     }
+
+
+
+
+
+
+    
 
     /**
      * Remove the specified resource from storage.

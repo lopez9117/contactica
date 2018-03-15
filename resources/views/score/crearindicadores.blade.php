@@ -63,7 +63,7 @@
       <div class="col-md-6">
         <input type="number" required="" class="form-control" name="meta" placeholder="Meta">
   <br>
-        <input type="text" required="" class="form-control" id="frecuecnia" name="frecuencia" placeholder="frecuencia de Medicion">
+        <input type="text" required="" class="form-control" id="frecuencia" name="frecuencia" placeholder="frecuencia de Medicion">
       </div>
 
 
@@ -122,15 +122,17 @@
   <th>{{$indicator->meta}} %</th>
   <th>{{$indicator->user_id}}</th>
   <th>{{$indicator->area}}</th>
-  <th> {{$indicator->frecuencia}} </th>
+  <th>{{$indicator->frecuencia}}</th>
   <th>
     <form style="display: inline;" method="POST" action=" {{route('score.destroy', $indicator->id)}}">
     {!!csrf_field()!!}
     {!!method_field('DELETE')!!}
     <button type="submit" class="btn btn-danger">Eliminar</button>
+
+
   </form>
 
-  <a onclick="mostrareditar({{$indicator->id}})" class="btn btn-warning" >Editar</a>
+    <a onclick="mostrareditar({{$indicator->id}})" class="btn btn-warning" >Editar</a>
 
 </th>
 </tr>
@@ -142,7 +144,7 @@
 
 
 <section>
-   {!! Form::open() !!}
+  <form>
     <div id="responsive-modal" class="modal fade" tabindex="-1" data-backdrop="static" >
       <div class="modal-dialog">
         <div class="modal-content">
@@ -152,63 +154,46 @@
 
         <div class="modal-body">
 
-
-          <input type="hidden" id="_token" name="_token" value="<?php echo csrf_token(); ?>">
-
+         
           <input type="hidden" name="id" id="id">
 
-
-          <input required="" class="form-control" placeholder="nombre del indicador" id="nombre_indicador" type="text" name="nombre">
-
-
-
-
+          <input type="hidden" name="_token" id="_token" value="<?php echo csrf_token(); ?>">
+          
+          
           <div class="form-group">
+            <label>Nombre Indicador: </label>
+          <input required="" class="form-control" placeholder="nombre del indicador" id="nombre_indicador" type="text" name="nombre">
+          </div>
 
-           <select class="form-control" placeholder="Selecciona" id="usuario" name="usuario">
-            <option value="">Seleccione</option>
-              @foreach($usuarios as $usuario)
-            <option value="{{$usuario->id}}">{{$usuario->nombres.' '.$usuario->apellidos}}</option>
-            @endforeach
-          </select>
-        </div>
-
-
-
+        <div class="form-group">
+            <label>Numerador: </label>
         <input type="text" required="" class="form-control" placeholder=" Nombre numerador" id="numerador"   name="numerador">
+      </div>
 
-
-
-        <input type="text" required="" class="form-control" name="denominador" id="denominador"  placeholder="Nombre denominador">
-
-
-
-
-
-        <input type="number" required="" class="form-control" name="meta" id="meta" placeholder="Meta">
-
-
+        <div class="form-group">
+            <label>Denominador: </label>
+        <input type="te xt" required="" class="form-control" name="denominador" id="denominador"  placeholder="Nombre denominador">
+      </div>
 
 
 
         <div class="form-group">
-
-         <select class="form-control" placeholder="Selecciona" id="proceso" name="proceso">
-          <option value="">Seleccione</option>
-            @foreach($procesos as $proceso)
-          <option value="{{$proceso->id}}">{{$proceso->nombre}}</option>
-          @endforeach
-        </select>
+            <label>Meta: </label>
+        <input type="number" required="" class="form-control" name="meta" id="meta" placeholder="Meta">
       </div>
+    
+      
 
-
-       <input type="text" required="" id="frecuencia" class="form-control" name="frecuencia" placeholder="frecuencia de Medicion">
+    <div class="form-group">
+            <label>Frecuencia de Medicion: </label>
+     <input type="text" required="" class="form-control" id="frecuencia2" name="frecuencia" placeholder="frecuencia de Medicion">
+    </div>
 
     </div>
     <div class="modal-footer">
       <button type="button" class="btn.btn-default" data-dismiss="modal">Cancelar</button>
-      {!!Form::submit('Guardar',array('onclick'=>'guardareditada({{$indicator->id}})'),['class' => 'btn-btn-success'])!!}
-
+      <button  type="submmit" class="btn btn-success" id="actualizar"  >Guardar</button>
+     
     </div>
   </div>
 </div>
@@ -243,35 +228,58 @@
 
            $.get(`editar/${id}`, function(res){
 
-
             $("#id").val(res.id);
             $("#nombre_indicador").val(res.nombre);
+          
+           
             $("#numerador").val(res.numerador);
             $("#denominador").val(res.denominador);
             $("#meta").val(res.meta);
-             $("#frecuencia").val(res.frecuencia);
+            $("#frecuencia2").val(res.frecuencia);
 
          $('#responsive-modal').modal('show');
        });
      }
 
-     function guardareditada(id){
 
-        var dato =  $("#nombre_indicador").val(), $("#numerador").val(),
+    
+
+      $("#actualizar").click(function(){
+           var dato = {
+                  'id' : $("#id").val(),
+                  'nombre' : $("#nombre_indicador").val(),
+                  
+                  'numerador': $("#numerador").val(),
+                  'denominador': $("#denominador").val(),
+                  'meta': $("#meta").val(),
+                 
+                  'frecuencia':  $("#frecuencia2").val(),
+        };
+
         var token = $("#_token").val();
 
-
         $.ajax({
-          url: route,
 
+          url: 'score.update/',
+          headers:{'X-CSRF-TOKEN':token},
+          type: 'POST',
+          dataType: 'json',
+          data: dato,
+
+           success: function(data) {
+                console.log('Evento creado');      
+                 },
+              error: function(){
+                console.log("Error al crear evento");
+              }  
+
+      });
+    
 
         });
 
-     }
-
-
-   
-
+     
+  
 </script>
 
 

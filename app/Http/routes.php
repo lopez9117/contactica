@@ -83,7 +83,7 @@ Route::delete('score/{id}', ['as' => 'score.destroy', 'uses' => 'ScoreController
 
 Route::get('editar/{id}', 'ScoreController@editar');
 
-Route::put('score/{id}',  ['as' => 'score.update', 'uses' =>'ScoreController@update']);
+Route::post('score.update',  ['as' => 'score.update', 'uses' =>'ScoreController@update']);
 Route::get('ajax-nombreindicadores/{id}', 'ScoreController@getnombresindicadores');
 
 
