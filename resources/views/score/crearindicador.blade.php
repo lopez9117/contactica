@@ -79,21 +79,21 @@
            </div>
 
            <div class="col-md-5">
-            <div class="col-md-6">
+            <div class="col-md-9">
               <input type="text" required="" disabled="true" class="form-control"  name="nombre_del_numerador" id="nombre_del_numerador">
             </div>
-            <div class="col-md-6">
-              <input required="" class="form-control" type="number" name="numerador" placeholder="valor del numerador">
+            <div class="col-md-3">
+              <input required="" class="form-control" type="number" name="numerador" placeholder="valor ">
             </div> <br>
             <hr style=" padding-top:1px; height: 1px;
             width: 93%;
             background-color: black;">
 
-            <div class="col-md-6" style="margin-top: -10px;">
+            <div class="col-md-9" style="margin-top: -10px;">
               <input type="text" required="" disabled="true" class="form-control" name="nombre_del_denominador" id="nombre_del_denominador">
             </div>
-            <div class="col-md-6" style="margin-top: -10px;">
-              <input required="" class="form-control" type="number" name="denominador" placeholder="valor de denominador">
+            <div class="col-md-3" style="margin-top: -10px;">
+              <input required="" class="form-control" type="number" name="denominador" placeholder="valor">
             </div>
           </div>
 

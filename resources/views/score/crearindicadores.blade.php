@@ -132,7 +132,7 @@
 
   </form>
 
-    <a onclick="mostrareditar({{$indicator->id}})" class="btn btn-warning" >Editar</a>
+    <a onclick="mostrareditar({{$indicator->id}})" class="btn btn-warning" >Editar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
 </th>
 </tr>

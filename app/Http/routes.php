@@ -71,6 +71,20 @@ return Datatables::eloquent(App\User::query())->make(true);
 
 //Rutas Dedicadas a el Score Card
 Route::get('indicator', ['as' => 'indicator', 'uses' => 'ScoreController@index']);
+
+Route::get('indicator1', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator1']);
+Route::get('indicator2', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator2']);
+Route::get('indicator3', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator3']);
+Route::get('indicator4', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator4']);
+Route::get('indicator5', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator5']);
+Route::get('indicator6', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator6']);
+Route::get('indicator7', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator7']);
+Route::get('indicator8', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator8']);
+Route::get('indicator9', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator9']);
+Route::get('indicator10', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator10']);
+Route::get('indicator11', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator11']);
+Route::get('indicator12', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator12']);
+
 Route::get('mapageneral', ['as' => 'mapageneral', 'uses' => 'ScoreController@mapageneral']);
 Route::get('mapadeprocesos', ['as' => 'mapadeprocesos', 'uses' => 'ScoreController@mapadeprocesos']);
 Route::get('crearindicadores', ['as' => 'crearindicadores', 'uses' => 'ScoreController@crearindicadores']);
@@ -80,11 +94,13 @@ Route::get('create', ['as' => 'create', 'uses' => 'ScoreController@create']);
 Route::post('create', ['as' => 'create.store', 'uses' => 'ScoreController@store']);
 Route::delete('create/{id}', ['as' => 'create.destroy', 'uses' => 'ScoreController@destroy']);
 Route::delete('score/{id}', ['as' => 'score.destroy', 'uses' => 'ScoreController@destroymatriz']);
-
 Route::get('editar/{id}', 'ScoreController@editar');
-
 Route::post('score.update',  ['as' => 'score.update', 'uses' =>'ScoreController@update']);
 Route::get('ajax-nombreindicadores/{id}', 'ScoreController@getnombresindicadores');
+
+
+
+
 
 
 //rutas para seleccionar los indicadores de cada mes

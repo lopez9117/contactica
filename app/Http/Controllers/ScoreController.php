@@ -93,6 +93,73 @@ class ScoreController extends Controller
         //
     }
 
+    public function indicator1()
+    {
+        $indicadoresfinales = matriz_indicator::where('area', '1') ->orderBy('nombre', 'desc')->get();
+        return view('score.crearindicador', compact('indicadoresfinales'));
+    }
+     public function indicator2()
+    {
+        $indicadoresfinales = matriz_indicator::where('area', '2') ->orderBy('nombre', 'desc')->get();
+        return view('score.crearindicador', compact('indicadoresfinales'));
+    }
+     public function indicator3()
+    {
+        $indicadoresfinales = matriz_indicator::where('area', '3') ->orderBy('nombre', 'desc')->get();
+        return view('score.crearindicador', compact('indicadoresfinales'));
+    }
+     public function indicator4()
+    {
+        $indicadoresfinales = matriz_indicator::where('area', '4') ->orderBy('nombre', 'desc')->get();
+        return view('score.crearindicador', compact('indicadoresfinales'));
+    }
+     public function indicator5()
+    {
+        $indicadoresfinales = matriz_indicator::where('area', '5') ->orderBy('nombre', 'desc')->get();
+        return view('score.crearindicador', compact('indicadoresfinales'));
+    }
+     public function indicator6()
+    {
+        $indicadoresfinales = matriz_indicator::where('area', '6') ->orderBy('nombre', 'desc')->get();
+        return view('score.crearindicador', compact('indicadoresfinales'));
+    }
+     public function indicator7()
+    {
+        $indicadoresfinales = matriz_indicator::where('area', '7') ->orderBy('nombre', 'desc')->get();
+        return view('score.crearindicador', compact('indicadoresfinales'));
+    }
+     public function indicator8()
+    {
+        $indicadoresfinales = matriz_indicator::where('area', '8') ->orderBy('nombre', 'desc')->get();
+        return view('score.crearindicador', compact('indicadoresfinales'));
+    }
+     public function indicator9()
+    {
+        $indicadoresfinales = matriz_indicator::where('area', '9') ->orderBy('nombre', 'desc')->get();
+        return view('score.crearindicador', compact('indicadoresfinales'));
+    }
+     public function indicator10()
+    {
+        $indicadoresfinales = matriz_indicator::where('area', '10') ->orderBy('nombre', 'desc')->get();
+        return view('score.crearindicador', compact('indicadoresfinales'));
+    }
+     public function indicator11()
+    {
+        $indicadoresfinales = matriz_indicator::where('area', '11') ->orderBy('nombre', 'desc')->get();
+        return view('score.crearindicador', compact('indicadoresfinales'));
+    }
+     public function indicator12()
+    {
+        $indicadoresfinales = matriz_indicator::where('area', '12') ->orderBy('nombre', 'desc')->get();
+        return view('score.crearindicador', compact('indicadoresfinales'));
+    }
+
+
+
+
+
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -240,12 +307,7 @@ class ScoreController extends Controller
 
     }
 
-
-
-
-
-
-    
+ 
 
     /**
      * Remove the specified resource from storage.
