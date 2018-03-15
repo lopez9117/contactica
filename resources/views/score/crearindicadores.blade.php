@@ -81,7 +81,7 @@
         </select>
       </div>
 
-      <button  type="submmit" class="btn btn-success" value="Dime propiedades" >Guardar</button>
+      <button style="margin-top: 6px;"  type="submmit" class="btn btn-success" value="Dime propiedades" >Guardar</button>
     </div>
 
   </div>
@@ -191,7 +191,7 @@
 
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn.btn-default" data-dismiss="modal">Cancelar</button>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
       <button  type="submmit" class="btn btn-success" id="actualizar"  >Guardar</button>
      
     </div>
