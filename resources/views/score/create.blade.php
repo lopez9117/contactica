@@ -22,7 +22,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
      <h1>
-      Crear indicador
+      Crear indicadores
     </h1>
   </section>
 
