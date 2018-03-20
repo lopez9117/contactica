@@ -1,4 +1,4 @@
-<?php
+|<?php
 
 use App\State;
 use App\Town;
@@ -20,39 +20,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-/*Route::get('roles', function () {
-return App\Role::with('user')->get();
-});*/
 
-// Route::get('test3', function () {
-//     $usuario               = new App\User;
-
-//     $usuario->name         = 'luis eduardo lopez';
-//     $usuario->email        = 'lu.lopez@misena.edu.co';
-//      $usuario->nombres        = 'lucho';
-//       $usuario->apellidos        = 'lopez';
-//       $usuario->pais        = '5';
-//       $usuario->ciudad        = 'medellin';
-//       $usuario->institucion        = 'soportica';
-//       $usuario->ocupacion        = 'Fullstack developer';
-//       $usuario->ruta        = '/dist/img/422c94f22750d34730bff25db01204d844d3de7c.png';
-
-//     $usuario->password     = bcrypt('123456');
-//     $usuario->save();
-    
-//     return $usuario;
-// });
-
-// Route::get('test2', function () {
-//     $roles               = new App\Role;
-//     $roles->name         = 'admin';
-//     $roles->display_name = 'rol administrador del sistema sistema';
-//     $roles->description  = 'Usuario administrador capaz de crear usuarios y roles';
-//     $roles->save();
-
-//     return $roles;
-
-// });
 
 
 //Rutads Dedicadas  a gestion de suarios
@@ -90,8 +58,11 @@ Route::get('mapadeprocesos', ['as' => 'mapadeprocesos', 'uses' => 'ScoreControll
 Route::get('crearindicadores', ['as' => 'crearindicadores', 'uses' => 'ScoreController@crearindicadores']);
 Route::post('crearindicadores', ['as' => 'crearindicadores.store', 'uses' => 'ScoreController@indicadoresestore']);
 Route::get('informeindicadores', ['as' => 'informeindicadores', 'uses' => 'ScoreController@informeindicadores']);
+
+
 Route::get('create', ['as' => 'create', 'uses' => 'ScoreController@create']);
 Route::post('create', ['as' => 'create.store', 'uses' => 'ScoreController@store']);
+
 Route::delete('create/{id}', ['as' => 'create.destroy', 'uses' => 'ScoreController@destroy']);
 Route::delete('score/{id}', ['as' => 'score.destroy', 'uses' => 'ScoreController@destroymatriz']);
 Route::get('editar/{id}', 'ScoreController@editar');

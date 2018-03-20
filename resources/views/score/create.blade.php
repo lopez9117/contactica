@@ -49,7 +49,7 @@
    </ul>
  </div>
 
- <a href="/indicator"><button class="btn btn-success">Crear Indicador</button></a>
+ 
 
  <!--datatables--><br><br>
 
