@@ -1,7 +1,6 @@
   @extends('layout2')
 
   @section('content')  
-
   <style type="text/css">
       #dashboard{
         text-align: center;

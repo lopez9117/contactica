@@ -1,24 +1,7 @@
   @extends('layout2')
 
   @section('content')
-  <script type="text/javascript">
-
-
-    $('select#mes').on('change',function(){
-     var valor = $(this).val();
-     alert(valor);
-
-   });
-
-    $('select#año').on('change',function(){
-      var valor = $(this).val();
-      alert(valor);
-
-    });
-
-
-  </script>
-
+  
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -36,7 +19,7 @@
           <div class="row">
             <div class="col-md-6">
               <label>Año: </label>
-              <select class="form-control" id="año" name="año">
+              <select class="form-control" id="año" name="año" id="selectaño">
 
                 <option value="2018">2018</option>
                 <option value="2019">2019</option>
@@ -46,7 +29,7 @@
 
             <div class="col-md-6">
               <label>Mes:</label>
-              <select class="form-control" id="mes" name="mes">
+              <select class="form-control" id="mes" name="mes" id="selectmes">
                 <option value="1">Enero</option>
                 <option value="2">Febrero</option>
                 <option value="3">Marzo</option>
@@ -81,6 +64,8 @@
            <div class="col-md-5">
             <div class="col-md-9">
               <input type="text" required="" disabled="true" class="form-control"  name="nombre_del_numerador" id="nombre_del_numerador">
+
+           
             </div>
             <div class="col-md-3">
               <input required="" class="form-control" type="number" name="numerador" placeholder="valor ">
@@ -142,12 +127,65 @@
 
 <script>
 
- $("#nombre").change(event => {
-   $.get(`ajax-nombreindicadores/${event.target.value}`, function(res, nombre){
-          // $("#nombre_del_numerador").empty();
-          // $("#nombre_del_denominador").empty();
-          res.forEach(element => {
+ // $("#cliente").change(event => {
+ //        $.get(`ajax-centrodecostos/${event.target.value}`, function(res, cliente){
+ //          $("#centrodecostos").empty();
+ //          res.forEach(element => {
+ //            $("#centrodecostos").append(`<option value=${element.id}> ${element.name} </option>`);
+ //          });
+ //        });
+ //      });
 
+
+
+// $(document).on('change','#nombre', function(){
+//      var nombre = $(this).val();   
+
+//     $.ajax({
+
+//         type: 'get',
+//         url: 'ajax-nombreindicadores',
+//         data: {'id': nombre},
+//         dataType: 'json',
+//         success: function(data){
+//          console.log('info');
+         
+//             $('#nombre_del_numerador').val(data.numerador);
+//             $('#nombre_del_denominador').val(data.denominador);
+//              $('#meta').val(data.meta);
+
+//         },
+//         error:function (jqXHR, textStatus, errorThrown){
+//           console.log(jqXHR, textStatus, errorThrown);
+//              }
+        
+
+//     });
+
+
+// });
+
+
+
+
+
+// $("#nombre").change(event => {
+//   $.get(`ajax-nombreindicadores/${event.target.value}`, function(res){
+//        res.forEach(element => {
+//              $("#nombre_del_numerador").append(`<option value=${element.numerador}> ${element.numerador} </option>`);
+//              $("#nombre_del_denominador").append(`<option value=${element.denominador}> ${element.denominador} </option>`);
+//              $("#meta").append(`<option value=${element.meta}> ${element.meta} </option>`);
+//     });
+//   });
+// });
+
+
+
+ $("#nombre").change(event => {
+   $.get(`ajax-nombreindicadores/${event.target.value}`, function(res){
+           $("#nombre_del_numerador").empty();
+           $("#nombre_del_denominador").empty();
+          res.forEach(element => {
             $("#nombre_del_numerador").val(element.numerador);
             $("#nombre_del_denominador").val(element.denominador);
             $("#meta").val(element.meta);

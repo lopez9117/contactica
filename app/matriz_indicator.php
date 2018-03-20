@@ -8,7 +8,10 @@ class matriz_indicator extends Model
 {
 
 
-protected $fillable = [
+	protected $table ='matriz_indicators';
+
+
+    protected $fillable = [
         'nombre', 'numerador', 'denominador','meta','user_id','area','frecuencia'];
 
 

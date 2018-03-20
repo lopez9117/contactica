@@ -1,4 +1,4 @@
-|<?php
+<?php
 
 use App\State;
 use App\Town;
