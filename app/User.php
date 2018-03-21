@@ -30,6 +30,11 @@ public function indicadores(){
     return $this->hasMany('App\Indicator');
 }
 
+public function nombrematriz(){
+
+    return $this->hasMany('App\matriz_indicator');
+}
+
 public function calendarios(){
 
     return $this->hasMany('App\Fullcalendareveto');

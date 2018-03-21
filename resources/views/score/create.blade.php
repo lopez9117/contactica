@@ -59,11 +59,12 @@
    <tr >
     <th>ID</th>
     <th>Nombre</th>
-    <th>Nombre de numerador</th>
-    <th>Nombre de denominador</th>
+   
     <th>Numerador</th>
     <th>Denominador</th>
     <th>Resultado</th>
+    <th>Meta</th>
+    
     <th>Comentario</th>
     <th>Fuente de datos</th>
     <th>Acciones</th>
@@ -77,15 +78,14 @@
   @foreach ($indicadores as $indicador)
   <th>{{$indicador->id}}</th>
   <th>{{$indicador->nombre}}</th>
-  <th>{{$indicador->nombre_del_numerador}}</th>
-  <th>{{$indicador->nombre_del_denominador}}</th>
   <th>{{$indicador->numerador}}</th>
   <th>{{$indicador->denominador}}</th>
   <th>{{$indicador->resultado}}%</th>
-  <th>{{$indicador->comentario}}</th>
+  <th>{{$indicador->meta}}</th>
+
+    <th>{{$indicador->comentario}}</th>
   <th> <a href="{{$indicador->ruta}}" ><i class="fa fa-file-word-o fa-3x"> </i></a> </th>
   <th>
-
    <form style="display: inline;" method="POST" action="{{route('create.destroy',$indicador->id)}}">
     {!!csrf_field()!!}
     {!!method_field('DELETE')!!}

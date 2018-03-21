@@ -173,7 +173,15 @@ class ScoreController extends Controller
         //$usuario->
 
         $indicadores = $usuario->indicadores;
+  
+       $indicators = matriz_indicator::all();   
+
+
+
+
         return view('score.create', compact('indicadores'));
+
+       
     }
 
     /**
@@ -208,6 +216,8 @@ class ScoreController extends Controller
             "comentario"             => $request->input('comentario'),
             "user_id"                => $usuario->id,
             "ruta"                   => $ruta . $nombre,
+            "meta"             => $request->input('meta'),
+            "area"             => $request->input('area'),
             "created_at"             => Carbon::now(),
             "updated_at"             => carbon::now(),
         ]);

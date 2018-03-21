@@ -63,7 +63,7 @@
 
            <div class="col-md-5">
             <div class="col-md-9">
-              <input type="text" required="" disabled="true" class="form-control"  name="nombre_del_numerador" id="nombre_del_numerador">
+              <input type="text" required=""  class="form-control"  name="nombre_del_numerador" id="nombre_del_numerador">
 
            
             </div>
@@ -75,7 +75,9 @@
             background-color: black;">
 
             <div class="col-md-9" style="margin-top: -10px;">
-              <input type="text" required="" disabled="true" class="form-control" name="nombre_del_denominador" id="nombre_del_denominador">
+              <input type="text"  class="form-control" name="nombre_del_denominador" id="nombre_del_denominador">
+
+               
             </div>
             <div class="col-md-3" style="margin-top: -10px;">
               <input required="" class="form-control" type="number" name="denominador" placeholder="valor">
@@ -88,7 +90,10 @@
           </div>
 
           <div style="padding-top:34px;" class="col-md-1">      
-            <input required="" disabled="true" class="form-control" type="number" name="meta" id="meta" placeholder="Meta">
+            <input class="form-control" type="number" id="meta" name="meta" placeholder="Meta">
+            
+            <input style="visibility: hidden;"  class="form-control" type="number" name="area" id="area"  placeholder="area">
+
          </div>
 
          <div style="padding-top:34px;" class="col-md-2">
@@ -189,6 +194,7 @@
             $("#nombre_del_numerador").val(element.numerador);
             $("#nombre_del_denominador").val(element.denominador);
             $("#meta").val(element.meta);
+            $("#area").val(element.area);
           });
         });
  });
