@@ -92,7 +92,7 @@
           <div style="padding-top:34px;" class="col-md-1">      
             <input class="form-control" type="number" id="meta" name="meta" placeholder="Meta">
             
-            <input class="form-control" type="number" name="area" id="area"  placeholder="area">
+            <input style="visibility: hidden;" class="form-control" type="number" name="area" id="area"  placeholder="area">
 
          </div>
 
