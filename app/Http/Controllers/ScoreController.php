@@ -6,7 +6,7 @@ use Carbon\Carbon;
 
 use App\User;
 use App\matriz_indicator;
-use App\indicator;
+use App\Indicator;
 use App\Proceso;
 use DB;
 use Illuminate\Http\Request;
