@@ -15,6 +15,7 @@ class AddAreaToMigrationsTable extends Migration
         Schema::table('indicators', function (Blueprint $table) {
             //
             $table->integer('area')->nullable();
+              //comemtario para uqe agarre heroku
         });
     }
 
@@ -28,6 +29,7 @@ class AddAreaToMigrationsTable extends Migration
         Schema::table('indicators', function (Blueprint $table) {
             //
             $table->dropColumn('area');
+              //comemtario para uqe agarre heroku
         });
     }
 }

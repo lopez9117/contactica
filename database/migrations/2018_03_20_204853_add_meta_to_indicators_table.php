@@ -15,6 +15,7 @@ class AddMetaToIndicatorsTable extends Migration
         Schema::table('indicators', function (Blueprint $table) {
             //
             $table->integer('meta')->nullable();
+            //comentario paraque agrre heroku
         });
     }
 
@@ -28,7 +29,9 @@ class AddMetaToIndicatorsTable extends Migration
         Schema::table('indicators', function (Blueprint $table) {
            
             $table->dropColumn('meta');
-            //
+
+
+            //comemtario para uqe agarre heroku
         });
     }
 }
