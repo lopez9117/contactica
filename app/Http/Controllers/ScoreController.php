@@ -216,8 +216,8 @@ class ScoreController extends Controller
             "comentario"             => $request->input('comentario'),
             "user_id"                => $usuario->id,
             "ruta"                   => $ruta . $nombre,
-            "meta"             => $request->input('meta'),
-            "area"             => $request->input('area'),
+            "meta"                   => $request->input('meta'),
+            "area"                   => $request->input('area'),
             "created_at"             => Carbon::now(),
             "updated_at"             => carbon::now(),
         ]);
