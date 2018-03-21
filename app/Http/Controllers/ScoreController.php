@@ -6,6 +6,7 @@ use Carbon\Carbon;
 
 use App\User;
 use App\matriz_indicator;
+use App\indicator;
 use App\Proceso;
 use DB;
 use Illuminate\Http\Request;
@@ -30,7 +31,7 @@ class ScoreController extends Controller
 
 
     public function crearindicadores()
-    {
+       {
 
         $usuarios = User::all();
 
@@ -165,23 +166,65 @@ class ScoreController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-
-        $usuario = Auth::user();
-
-        //$usuario->
-
-        $indicadores = $usuario->indicadores;
-  
-       $indicators = matriz_indicator::all();   
-
-
-
-
-        return view('score.create', compact('indicadores'));
-
-       
+    public function create1()
+    {   
+        $indicadores = Indicator::where('area','1')->get();
+        return view('score.create', compact('indicadores'));      
+    }
+    public function create2()
+    {   
+        $indicadores = Indicator::where('area','2')->get();
+        return view('score.create', compact('indicadores'));      
+    }
+    public function create3()
+    {   
+        $indicadores = Indicator::where('area','3')->get();
+        return view('score.create', compact('indicadores'));      
+    }
+    public function create4()
+    {   
+        $indicadores = Indicator::where('area','4')->get();
+        return view('score.create', compact('indicadores'));      
+    }
+    public function create5()
+    {   
+        $indicadores = Indicator::where('area','5')->get();
+        return view('score.create', compact('indicadores'));      
+    }
+    public function create6()
+    {   
+        $indicadores = Indicator::where('area','6')->get();
+        return view('score.create', compact('indicadores'));      
+    }
+    public function create7()
+    {   
+        $indicadores = Indicator::where('area','7')->get();
+        return view('score.create', compact('indicadores'));      
+    }
+    public function create8()
+    {   
+        $indicadores = Indicator::where('area','8')->get();
+        return view('score.create', compact('indicadores'));      
+    }
+    public function create9()
+    {   
+        $indicadores = Indicator::where('area','9')->get();
+        return view('score.create', compact('indicadores'));      
+    }
+    public function create10()
+    {   
+        $indicadores = Indicator::where('area','10')->get();
+        return view('score.create', compact('indicadores'));      
+    }
+    public function create11()
+    {   
+        $indicadores = Indicator::where('area','11')->get();
+        return view('score.create', compact('indicadores'));      
+    }
+    public function create12()
+    {   
+        $indicadores = Indicator::where('area','12')->get();
+        return view('score.create', compact('indicadores'));      
     }
 
     /**

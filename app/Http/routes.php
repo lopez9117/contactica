@@ -60,7 +60,21 @@ Route::post('crearindicadores', ['as' => 'crearindicadores.store', 'uses' => 'Sc
 Route::get('informeindicadores', ['as' => 'informeindicadores', 'uses' => 'ScoreController@informeindicadores']);
 
 
-Route::get('create', ['as' => 'create', 'uses' => 'ScoreController@create']);
+//Route::get('create', ['as' => 'create', 'uses' => 'ScoreController@create']);
+
+Route::get('create1', ['as' => 'create1', 'uses' => 'ScoreController@create1']);
+Route::get('create2', ['as' => 'create1', 'uses' => 'ScoreController@create2']);
+Route::get('create3', ['as' => 'create1', 'uses' => 'ScoreController@create3']);
+Route::get('create4', ['as' => 'create1', 'uses' => 'ScoreController@create4']);
+Route::get('create5', ['as' => 'create1', 'uses' => 'ScoreController@create5']);
+Route::get('create6', ['as' => 'create1', 'uses' => 'ScoreController@create6']);
+Route::get('create7', ['as' => 'create1', 'uses' => 'ScoreController@create7']);
+Route::get('create8', ['as' => 'create1', 'uses' => 'ScoreController@create8']);
+Route::get('create9', ['as' => 'create1', 'uses' => 'ScoreController@create9']);
+Route::get('create10', ['as' => 'create1', 'uses' => 'ScoreController@create10']);
+Route::get('create11', ['as' => 'create1', 'uses' => 'ScoreController@create11']);
+Route::get('create12', ['as' => 'create1', 'uses' => 'ScoreController@create12']);
+
 
 Route::post('create', ['as' => 'create.store', 'uses' => 'ScoreController@store']);
 
