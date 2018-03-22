@@ -166,6 +166,12 @@ class ScoreController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+      public function create()
+    {   
+        $indicadores = Indicator::where('area','1')->get();
+        return view('score.create', compact('indicadores'));      
+    }
     public function create1()
     {   
         $indicadores = Indicator::where('area','1')->get();
@@ -266,7 +272,7 @@ class ScoreController extends Controller
         ]);
 
         //Redireccionar
-        return redirect()->route('create');
+        return redirect()->route('mapadeprocesos');
 
         //RETURN $request->all();
 

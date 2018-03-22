@@ -61,7 +61,7 @@ Route::get('informeindicadores', ['as' => 'informeindicadores', 'uses' => 'Score
 
 
 //Route::get('create', ['as' => 'create', 'uses' => 'ScoreController@create']);
-
+Route::get('create', ['as' => 'create', 'uses' => 'ScoreController@create']);
 Route::get('create1', ['as' => 'create1', 'uses' => 'ScoreController@create1']);
 Route::get('create2', ['as' => 'create1', 'uses' => 'ScoreController@create2']);
 Route::get('create3', ['as' => 'create1', 'uses' => 'ScoreController@create3']);
