@@ -40,18 +40,18 @@ return Datatables::eloquent(App\User::query())->make(true);
 //Rutas Dedicadas a el Score Card
 Route::get('indicator', ['as' => 'indicator', 'uses' => 'ScoreController@index']);
 
-Route::get('indicator1', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator1']);
-Route::get('indicator2', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator2']);
-Route::get('indicator3', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator3']);
-Route::get('indicator4', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator4']);
-Route::get('indicator5', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator5']);
-Route::get('indicator6', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator6']);
-Route::get('indicator7', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator7']);
-Route::get('indicator8', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator8']);
-Route::get('indicator9', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator9']);
-Route::get('indicator10', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator10']);
-Route::get('indicator11', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator11']);
-Route::get('indicator12', ['as' => 'indicator1', 'uses' => 'ScoreController@indicator12']);
+Route::get('indicator1',  ['as' => 'indicator1', 'uses' => 'ScoreController@indicator1']);
+Route::get('indicator2',  ['as' => 'indicator2', 'uses' => 'ScoreController@indicator2']);
+Route::get('indicator3',  ['as' => 'indicator3', 'uses' => 'ScoreController@indicator3']);
+Route::get('indicator4',  ['as' => 'indicator4', 'uses' => 'ScoreController@indicator4']);
+Route::get('indicator5',  ['as' => 'indicator5', 'uses' => 'ScoreController@indicator5']);
+Route::get('indicator6',  ['as' => 'indicator6', 'uses' => 'ScoreController@indicator6']);
+Route::get('indicator7',  ['as' => 'indicator7', 'uses' => 'ScoreController@indicator7']);
+Route::get('indicator8',  ['as' => 'indicator8', 'uses' => 'ScoreController@indicator8']);
+Route::get('indicator9',  ['as' => 'indicator9', 'uses' => 'ScoreController@indicator9']);
+Route::get('indicator10', ['as' => 'indicator10', 'uses' => 'ScoreController@indicator10']);
+Route::get('indicator11', ['as' => 'indicator11', 'uses' => 'ScoreController@indicator11']);
+Route::get('indicator12', ['as' => 'indicator12', 'uses' => 'ScoreController@indicator12']);
 
 Route::get('mapageneral', ['as' => 'mapageneral', 'uses' => 'ScoreController@mapageneral']);
 Route::get('mapadeprocesos', ['as' => 'mapadeprocesos', 'uses' => 'ScoreController@mapadeprocesos']);

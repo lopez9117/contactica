@@ -99,7 +99,7 @@
 </div>
 
 <script src="js/highcharts.js"></script>
-
+<!-- 
 <script type="text/javascript">
 
   Highcharts.chart('contenedor', {
@@ -142,5 +142,5 @@
   }]
 
 });
-</script>
+</script> -->
 @stop()
