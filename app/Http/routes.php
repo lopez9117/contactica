@@ -126,3 +126,7 @@ Route::post('guardaEventossinajax', array('as' => 'guardaEventossinajax','uses' 
 
 Route::post('actualizaEventos','CalendarController@update');
 Route::post('eliminaEvento','CalendarController@delete');
+
+
+
+Route::get('contactica', ['as' => 'contactica', 'uses' => 'EvaluacionController@index']);

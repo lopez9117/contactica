@@ -113,7 +113,7 @@
       text: ''
     },
     xAxis: {
-      categories: [ 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre']
+      categories: [ 'enero','Febrero','Marzo','Abril','Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre']
     },
     yAxis: {
       title: {
