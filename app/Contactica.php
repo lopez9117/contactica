@@ -8,5 +8,5 @@ class Contactica extends Model
 {
     //
 
-    protected $table = “contactica”;
+    protected $table = “contacticas”;
 }

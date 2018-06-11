@@ -65,14 +65,14 @@ $photos = json_decode($response->getBody()->getContents());
         $thumbnailUrl = $photo->thumbnailUrl;
 
 
-           DB::table('contactica')->insert([
+           DB::table('contacticas')->insert([
             "id"                 => $id ,
             "albumId"   => $albumId,
             "title" => $title,
             "url"              => $url,
             "thumbnailUrl"            => $thumbnailUrl,
-            // "created_at"             => Carbon::now(),
-            // "updated_at"             => carbon::now(),
+            "created_at"             => Carbon::now(),
+            "updated_at"             => carbon::now(),
         ]);
 
 
@@ -95,7 +95,7 @@ $photos = json_decode($response->getBody()->getContents());
                 {
                     $results[] = [ 'id' => $query->id, 'avatar' =>$query->url,'value' => $query->title];
                 }
-                
+
                 return Response::json($results);
             
             }
