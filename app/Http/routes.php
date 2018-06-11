@@ -31,9 +31,11 @@ Route::get('/', function () {
 
 Route::get('crearjson', 'EvaluacionController@crear_json');
 
+Route::get('contactica', 'EvaluacionController@index');
+
+
 route::get('search/autocomplete','EvaluacionController@autocomplete');
 
-Route::get('contactica', 'EvaluacionController@index');
 
 
 

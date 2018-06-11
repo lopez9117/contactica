@@ -1,4 +1,6 @@
+@extends('layout2')
 
+@section('content')
 
       <!-- Content Header (Page header) -->
       <section class="content-header">
@@ -8,8 +10,7 @@
       </section>
 
       <!-- Main content -->
-      <iframe width="933" height="700" src="https://app.powerbi.com/view?r=eyJrIjoiYTUxZmE3ZTEtMDU4NS00YjJjLWE0YWItNzg2OGY0NDE4ZmNiIiwidCI6IjE3YTAyY2NkLWI4YjgtNDIxOS1hYmE5LWMwNjc5OGMxM2VjZCIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
-
+   
        
       
 <div class="wrapper">
@@ -28,10 +29,10 @@
          
  </section>
 
-
-
 </div>
       
+         <iframe width="933" height="700" src="https://app.powerbi.com/view?r=eyJrIjoiYTUxZmE3ZTEtMDU4NS00YjJjLWE0YWItNzg2OGY0NDE4ZmNiIiwidCI6IjE3YTAyY2NkLWI4YjgtNDIxOS1hYmE5LWMwNjc5OGMxM2VjZCIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+
 
 
 
@@ -39,9 +40,15 @@
 
 
 
+
+@endsection()
+
+@section('scripts')
+
 <script>
     
         $(function()
+
         {
                  $( "#q" ).autocomplete({
                   source: "search/autocomplete",
@@ -66,3 +73,5 @@
               };
         });
 </script>
+
+@endsection()

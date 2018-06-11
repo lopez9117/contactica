@@ -95,6 +95,7 @@ $photos = json_decode($response->getBody()->getContents());
                 {
                     $results[] = [ 'id' => $query->id, 'avatar' =>$query->url,'value' => $query->title];
                 }
+                
                 return Response::json($results);
             
             }
