@@ -62,7 +62,7 @@
                     var $li = $("<li style='width:800px;margin-left:10px;margin-bottom:5px'>"),
                         $img = $("<img style='width:8%'>");
                     $img.attr({
-                      src: '{{ URL::to('/') }}/images/' + item.avatar,
+                      src: '{{ URL::to('/') }}/' + item.avatar,
                       alt: item.value
                 });
                 $li.attr('data-value', item.value);

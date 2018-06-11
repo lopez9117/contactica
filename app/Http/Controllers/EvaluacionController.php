@@ -75,6 +75,8 @@ $photos = json_decode($response->getBody()->getContents());
             "updated_at"             => carbon::now(),
         ]);
 
+         
+
 
     }
 
