@@ -16,6 +16,12 @@ use DB;
 
 use Carbon\Carbon;
 
+use Response;
+
+use Input;
+
+use App\Contactica;
+
 class EvaluacionController extends Controller
 {
     /**
@@ -26,7 +32,7 @@ class EvaluacionController extends Controller
     public function index()
     {
         //
-        return view ('evaluacion.evaluacion');
+        return view('evaluacion.evaluacion');
     }
 
 
@@ -76,6 +82,23 @@ $photos = json_decode($response->getBody()->getContents());
 
 
 }
+
+
+        public function autocomplete()
+            {
+                $queries = Contactica::where(function($query)
+                {
+                    $term = Input::get('term');
+                    $query->where('id', 'like', '%'.$term.'%');
+                })->take(6)->get();
+                foreach ($queries as $query)
+                {
+                    $results[] = [ 'id' => $query->id, 'avatar' =>$query->url,'value' => $query->title];
+                }
+                return Response::json($results);
+            
+            }
+
 
   
 }

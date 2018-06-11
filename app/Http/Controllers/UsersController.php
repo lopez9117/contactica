@@ -25,8 +25,8 @@ class UsersController extends Controller
     public function home()
     {
 
-        //return view('home');
-         return view('evaluacion.evaluacion');
+        return view('home');
+         
     }
 
     public function index()

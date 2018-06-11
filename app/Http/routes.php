@@ -28,7 +28,12 @@ Route::get('/', function () {
 });
 
 
+
 Route::get('crearjson', 'EvaluacionController@crear_json');
+
+route::get('search/autocomplete','EvaluacionController@autocomplete');
+
+Route::get('contactica', 'EvaluacionController@index');
 
 
 //Rutads Dedicadas  a gestion de suarios
@@ -137,4 +142,4 @@ Route::post('eliminaEvento','CalendarController@delete');
 
 
 
-Route::get('contactica', ['as' => 'contactica', 'uses' => 'EvaluacionController@index']);
+
