@@ -28,7 +28,7 @@
     <body class="hold-transition login-page">
       <div class="login-box">
 
-        <img  src="dist/img/20160301 LOGO SOPORTICA 2016.png" width="355" height="150">
+        <img  src="dist/img/contactica-logo.png" width="355" height="150">
         
         <div class="login-box-body">
           <p class="login-box-msg">Ingrese al sistema</p>
