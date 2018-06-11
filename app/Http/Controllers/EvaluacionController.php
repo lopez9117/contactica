@@ -45,6 +45,7 @@ class EvaluacionController extends Controller
 
 $response = $client->request('GET', 'photos');
 
+
 $photos = json_decode($response->getBody()->getContents());
 
 
