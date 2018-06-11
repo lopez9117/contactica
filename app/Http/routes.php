@@ -36,6 +36,8 @@ route::get('search/autocomplete','EvaluacionController@autocomplete');
 Route::get('contactica', 'EvaluacionController@index');
 
 
+
+
 //Rutads Dedicadas  a gestion de suarios
 Route::get('login', 'Auth\AuthController@showLoginForm');
 Route::post('login', 'Auth\AuthController@login');
