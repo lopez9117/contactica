@@ -1,10 +1,20 @@
 <?php
 
+
+
 namespace App\Http\Controllers;
+
+
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+
+use GuzzleHttp\Client;
+
+use DB;
+
+use Carbon\Carbon;
 
 class EvaluacionController extends Controller
 {
@@ -16,73 +26,55 @@ class EvaluacionController extends Controller
     public function index()
     {
         //
-
         return view ('evaluacion.evaluacion');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+
+
+  
+
+   public function crear_json(){
+
+    $client = new Client([
+    // Base URI is used with relative requests
+    'base_uri' => 'https://jsonplaceholder.typicode.com',
+    // You can set any number of default request options.
+    'timeout'  => 5.0,
+    ]);
+
+
+$response = $client->request('GET', 'photos');
+
+$photos = json_decode($response->getBody()->getContents());
+
+
+    foreach ($photos as $photo) {
+        # code...
+
+        $id = $photo->id;
+        $albumId = $photo->albumId;
+        $title = $photo->title;
+        $url = $photo->url;
+        $thumbnailUrl = $photo->thumbnailUrl;
+
+
+           DB::table('contactica')->insert([
+            "id"                 => $id ,
+            "albumId"   => $albumId,
+            "title" => $title,
+            "url"              => $url,
+            "thumbnailUrl"            => $thumbnailUrl,
+            // "created_at"             => Carbon::now(),
+            // "updated_at"             => carbon::now(),
+        ]);
+
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+}
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+  
 }

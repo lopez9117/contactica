@@ -3,6 +3,8 @@
 use App\State;
 use App\Town;
 
+
+
 use Illuminate\Support\Facades\Input;
 
 /*
@@ -16,11 +18,17 @@ use Illuminate\Support\Facades\Input;
 |
  */
 
+
+
+
+///photos
+
 Route::get('/', function () {
     return view('auth.login');
 });
 
 
+Route::get('crearjson', 'EvaluacionController@crear_json');
 
 
 //Rutads Dedicadas  a gestion de suarios

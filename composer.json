@@ -10,7 +10,8 @@
         "yajra/laravel-datatables-oracle": "~6.0",
         "anhskohbo/no-captcha": "^2.4",
           "laravelcollective/html": "5.2.*",
-        "google/apiclient": "^2.2"
+        "google/apiclient": "^2.2",
+        "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
