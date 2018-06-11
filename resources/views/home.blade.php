@@ -31,8 +31,8 @@
             <a href="/mapageneral"><img src="dist/img/bars-chart (1).png"/><h4>SCORE CARD</h4></a>
           </div>
           <div class="col-sm-4">
-            <a href="#"><img src="dist/img/car.png"/>
-<h4>SOLICITUD DE TRANSPORTE</h4></a>
+            <a href="contactica"><img src="dist/img/contactica-logo.png" width="60" height="60">
+<h4>PRUEBA CONTACTICA</h4></a>
 
           </div>
           <div class="col-sm-4">

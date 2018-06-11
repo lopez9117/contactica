@@ -131,7 +131,7 @@
                 <li><a href="/administrar"><i class="fa fa-circle-o"></i>Administrar</a></li>
               </ul>
             </li>
-            <li><a href=""><i class="fa fa-car"></i>  SOLICITUD TRANSPORTE</a></li>
+            <li><a href="/contactica"><i class="fa fa-car"></i>  PRUEBA CONTACTICA</a></li>
             <li><a href=""><i class="fa fa-building-o"></i>  EDIFICIOS</a></li>
             <li><a href=""><i class="fa fa-graduation-cap"></i>  GESTIÓN DEL CONOCIMIENTO</a></li>
             <li><a href=""><i class="fa fa-sitemap"></i>  MANTENIMIENTO</a></li>
@@ -208,6 +208,8 @@
 
 
     <script src="plugins/fullcalendar/fullcalendar.min.js"></script>
+
+    
 
   
     @yield('scripts')
